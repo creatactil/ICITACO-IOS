@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Version IOS-->
+
+<title>ICI TACO</title>
+
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+<link rel="shortcut icon" href="imagenes/icono.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="144.png" />
+
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="PushNotification.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+	
+    <script src="jqm145/jquery-1.11.1.min.js"></script>
+	
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+    <script src="jqm145/jquery.mobile-1.4.5.min.js"></script>
+
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<link rel="stylesheet" href="jqm145/jquery.mobile.structure-1.4.5.min.css"/>
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="themes/tema.min.css" />
+<link rel="stylesheet" href="css/estilo.css" />
+
+
+
+<script type="text/javascript"> 
+        //El registro al servicio de google lo hacemos automáticamente
+       app.initialize();
+	
+</script>
+
+
+<script src="js/borrarmensaje.js"></script>
+<script src="js/compartir.js"></script>
+
+<script src="js/desconectar.js"></script>
+<script src="js/desplazar.js"></script>
+
+
+<script src="js/fcalendario.js"></script>
+<script src="js/firma.js"></script>
+
+<script src="js/globo.js"></script>
+<script src="js/init.js"></script>
+
+
+<script src="js/inicio.js"></script>
+<script src="js/lasesion.js"></script>
+<script src="js/listamensajes.js"></script>
+<script src="js/listabarrios.js"></script>
+<script src="js/listamunicipios.js"></script>
+
+<script src="js/listadeeventos.js"></script>
+<script src="js/loginval2.js"></script>
+<script src="js/listatipologia.js"></script>
+<script src="js/listaprotagonista.js"></script>
+<script src="js/listasujeto.js"></script>
+<script src="js/listatodos.js"></script>
+
+<script src="js/mostrarDatos.js"></script>
+<script src="js/mapa.js"></script>
+<script src="js/mapatodo.js"></script>
+
+<script src="js/onLoad.js"></script>
+<script src="js/passemail.js"></script>
+<script src="js/portada.js"></script>
+
+<script src="js/registrarColegiado.js"></script>
+<style type="text/css">
+.granate {
+	color: #542876;
+}
+.ui-navbar li .ui-btn{
+	font-size:11px;
+	}
+
+/*ordenador zoom bajo*/
+
+@media only screen
+and (max-width: 1440px){
+	#imgportada {
+  background-image:url(http://icitaco.creatactil.com/portada/4.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height: 100%;  
+  width: 100%;  
+  
+}
+}
+
+/*tablet horizontal*/
+@media only screen
+and (max-width: 1300px){
+	#imgportada {
+  background-image:url(http://icitaco.creatactil.com/portada/3.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height: 100%;  
+  width: 100%;  
+  
+}
+}
+
+/*tablet vertical*/
+@media only screen
+and (max-width: 992px) {
+	#imgportada {
+  background-image:url(http://icitaco.creatactil.com/portada/2.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  height: 100%;  
+  width: 100%;  
+  
+}
+}
+/*movil*/
+@media only screen 
+and (max-width: 768px){
+	#imgportada {
+  background-image:url(http://icitaco.creatactil.com/portada/1.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  background-size:contain;  
+  width: 100%;  
+  
+}
+}
+@media only screen 
+and (max-width: 450px){
+	#imgportada {
+  background-image:url(http://icitaco.creatactil.com/portada/0.jpg);
+  background-repeat:no-repeat;
+  background-position:top;
+  background-size:contain; 
+  width: 100%;  
+  
+}
+}
+</style>
+
+
+</head> 
+<body onLoad="init()"> 
+
+<!----------------------------PAGINA 1-------------------------------->
+<div data-role="page" id="page1" data-theme="a" >  
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+ <div data-role="panel" id="overlayPanel" data-display="overlay" data-theme="a"> 
+    <h3>Menú</h3>
+    <div style="width:98%" data-theme="a">
+<ul data-role="listview">
+    <li data-icon="user" ><a href="#" onClick="mostrarDatos()" style="text-shadow:none">Registro</a></li>
+    <li data-icon="calendar"><a href="#" onClick="listafechas()" style="text-shadow:none">Agenda</a></li>
+    <li data-icon="mail" ><a onClick="lasesion()" style="text-shadow:none">Mensajes</a></li>
+    <li data-icon="bullets"><a onClick="lasesion2()" style="text-shadow:none">Fichero Comunitario</a></li>
+    <li data-icon="info"><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-transition="slide" style="text-shadow:none">Biblioteca</a></li>
+    <li data-icon="navigation"><a href="#page15" data-transition="slide" style="text-shadow:none">Web y Redes Sociales</a></li>
+    <li data-icon="info"><a href="#page5" data-transition="slide" style="text-shadow:none">Ayuda</a></li>
+    <li data-icon="info"><a href="#page8" data-transition="slide" style="text-shadow:none">Contacto</a></li>
+    <li data-icon="power" ><a onClick="desconectar()" style="text-shadow:none">Salir app</a></li>
+    <li data-icon="delete"><a href="#pageone" data-rel="close" style="text-shadow:none">Cerrar menú</a></li>
+    
+</ul>
+<br>
+<br>
+<center>
+App Diseñada por creaTáctil S.L.
+<a onClick="window.open('http://www.creatactil.com','_blank','location=no','closebuttoncaption=Return')">www.creatactil.com</a>
+</center>
+    </div>
+ </div>
+
+  
+    
+    <div data-role="header" data-theme="a" style="height:40px">
+		<a href="#overlayPanel" data-role="button" data-icon="bars" data-iconpos="notext"></a>
+    
+    	<h1>YO SOY TACO</h1>
+       
+        <a href="" data-role="button" class="ui-btn-right" data-mini="true" data-icon="action" onClick="" data-iconpos="notext"></a>
+    </div >
+    
+     <div id="imgportada" data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; height:100%">
+    <!--<img  src="" height="0%" width="100%">-->
+    
+    </div> 
+    <!--<center><div style="position:absolute; bottom:6%"><img src="imgportada/pie1.jpg" width="100%"></div></center>-->
+    <!--footer-->  
+    <div data-role="footer" data-theme="a" data-position="fixed" >
+    
+    
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page9" data-role="button" onClick="listafechas()" data-icon="calendar" >Agenda</a></li>
+    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
+    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
+    </ul>
+	</div>
+   
+   
+    
+    </div>
+    
+</div>
+
+
+<!-------------------------------------PAGINA 0---------------------------------------------------------------------->
+<div data-role="page" data-theme="a" id="pagina0">
+	<!--<div style="height:20px; visibility:hidden"> </div>-->
+  <div data-role="header">
+  <a class="ui-btn-left" data-mini="true" href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a"></a>
+   <h1>YO SOY TACO</h1> 
+  </div>
+	
+  <div data-role="main" class="ui-content" >
+  
+         <div class="ui-grid-solo" align="center" style="width:90%; margin-left:5%; margin-top:15%; margin-bottom:15%; ">
+         <form name="form2" id="form2" method="POST">
+    			<label for="usuario" >Correo electrónico:</label>        
+        		<input name="usuario" type="email" id="usuario" autofocus>        
+     			<!---------->         
+        		<label for="pa2">Contraseña:</label>
+        		<input type="password" name="pa2" id="pa2"> 
+                <a data-role="button"  data-icon="check" data-transition="slide" onClick="loginVal2()" data-inline="true" style="width:65px;  color: #fff;  text-shadow:none">Entrar</a>
+                <a data-role="button" data-icon="edit" href="#page7" style="width:65px; color: #fff;  text-shadow:none" data-inline="true">Registro</a>
+                              		
+           </form> 
+              <br><br><a href="" onClick="passEmail()">He olvidado mi contraseña</a>                
+		</div>
+                      
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+   
+   	<label style="font-size:15px;"><center>&copy; Todos los derechos reservados creaTáctil</center></label>
+   
+  </div>
+  
+</div> 
+<!---------------FIN PAGINA 0----------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------PAGINA 2-------------------------------->
+<div data-role="page" id="page2" data-theme="a">
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">
+    
+    <a class="ui-btn-left" data-mini="true" href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a"></a>
+       		<h1>REGISTRO</h1>
+       
+	</div>
+	
+    
+    
+    <div data-role="content" id="contenido1"  >	
+		
+        
+        <form name="formulario1" id="formulario1">
+        
+        <label for="nombre">Nombre:</label>
+        <input name="nombre" type="text" id="nombre" value="" placeholder="Nombre">
+        
+        <label for="apellidos">Apellidos:</label>
+        <input name="apellidos" type="text" id="apellidos" value="" placeholder="Apellidos">
+        
+        <label for="movil">Telefono móvil:</label>
+        <input name="movil" type="number" maxlength="9" id="movil" value="" placeholder="Telefono móvil">
+        
+        <label for="direccion">Dirección:</label>
+        <input name="direccion" type="text" id="direccion" value="" placeholder="Dirección">
+        
+        <label for="municipio">Municipio:</label>
+        <input name="municipio" type="text" id="municipio" value="" placeholder="Municipio">
+        
+        <label for="codpostal">Código postal:</label>
+        <input name="codpostal" type="number" maxlength="5" id="codpostal" value="" placeholder="Código postal">
+        		
+        <fieldset class="ui-grid-a" data-type="horizontal">
+   	
+    		<div class="ui-block-a">	
+    			<label for="sexo">Sexo:</label>
+    				<select id="sexo" name="sexo" data-native-menu="false" >
+    					<option value="H" selected>Hombre</option>
+    					<option value="M">Mujer</option>
+    				</select></div>
+  		
+      	<div class="ui-block-b">
+         	<label for="edad">Edad:</label>
+    			<select id="edad" name="edad" data-native-menu="false">
+    				<option value="-18" selected>- 18</option>
+    				<option value="19-30">Entre 18 y 30</option>
+                    <option value="31-64">Entre 31 y 64</option>
+                    <option value="+65">Más de 65</option>
+    			</select></div>
+    </fieldset>
+   
+              	
+        <label for="correo">Correo electrónico:</label>
+        <input name="correo" type="email" id="correo" placeholder="Correo electrónico">
+        
+        <label for="pass">Contraseña:</label>
+       <input name="pass" id="pass" type="password" placeholder="Max. 20 caracteres">
+       	  
+            
+          
+           <input name="regId" id="regId" type="hidden">    
+  		</form>  
+        
+       	 <div id="deviceready" class="blink" hidden="true">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+      </div>
+  </div>  
+	
+    
+     		<!-- Botones de registro 	
+ 		 <fieldset class="ui-grid-b">
+           
+           <div class="ui-block-a"></div>
+           <div class="ui-block-b">--->
+ <a href="#" data-role="button" data-transition="slide" data-icon="check" id="enviadatos" style="margin-left:1em; margin-right:1em;  text-shadow:none; color:#FFF" onClick="registrarColegiado()">Guardar</a>
+ 		<!--	</div>	
+    		 <div class="ui-block-b">
+    <a data-role="button" name="link" href="" data-icon="plus" onClick="validarDni2()" style="margin-right:1em; margin-left:5%">Modificar Datos Alumn@s</a>
+    		</div> 
+            </fieldset>------>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>				
+    
+    <!-- Pie de pagina dos -->  
+	
+	
+</div>
+
+
+<!----------------------------PAGINA 4-------------------------------->
+<div data-role="page" id="page4" data-theme="a">
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">   
+	  <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a">Atrás</a>
+      <h1>Mensajes</h1>
+	<!--<a href="#page1" data-role="button" data-icon="home" onClick="inicio()">Inicio</a> -->
+    </div> 
+	
+	 <div data-role="content" id="contenido">
+		
+		   <!-- Aqui se añade el listado de mensajes -->
+		  <ul data-role="listview"  id="lista"  data-inset="true"  >
+		  
+          </ul>
+          
+           <ul data-role="listview"  id="lista1"  data-inset="true" >
+		  </ul>
+	 		<center><div id="carga23"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>
+       <br><br><br><br><br><br><br><br>
+</div> 
+        
+        
+        
+    <!--Pie de pagina ---->
+   <div data-role="footer" data-theme="a" data-position="fixed" id="piepagina">
+    
+  </div>
+   <!--Final Pie de pagina -->
+    
+   
+    
+ 
+</div>
+<!----------------------------PAGINA 5-------------------------------->
+<div data-role="page" id="page5" data-theme="a">
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>
+		<h1 style=" margin-left:20px; margin-right:20px">PÁGINA DE AYUDA</h1>
+	</div>
+	
+    <div data-role="content">	
+			   
+            
+            <p><a href="#" data-role="button" data-icon="bullets" data-iconpos="notext" data-inline="true"></a><strong>Registro y modificación</strong><br>
+   	  <ul>
+                 <li>Introduzca sus datos.</li>
+                 <li>Asegúrese de que éstos son correctos para que la aplicación funcione adecuadamente. A continuación presione el botón <strong>"Guardar"</strong>.<br></li>
+      </ul>                
+         
+             <a href="#" data-role="button" data-icon="mail" data-iconpos="notext" data-inline="true"></a><strong>Mensajes</strong><br>
+             <ul>
+             <li>En este apartado se muestran todos los Mensajes enviados por la Entidad a nuestra aplicación móvil.</li>
+             <li> Presionando sobre el título del mensaje accederá a su lectura.</li>
+             <li>Pulsando sobre el icono <strong>"X"</strong> se borrará el mensaje elegido.</li>
+             </ul>
+ <a href="#" data-role="button" data-icon="plus" data-iconpos="notext" data-inline="true"></a><strong>Más</strong>
+ 	<ul>
+    <li> En esta opción accederá a la página web de la Entidad y a sus redes sociales.</li>
+    </ul>
+<a href="#" data-role="button" data-icon="phone" data-iconpos="notext" data-inline="true"></a><strong>Contacto</strong>
+ 	<ul>
+    <li> Nuestro correo de contacto: info@creatactil.com.</li>
+    </ul>
+           </p>
+		      <center><strong>
+<label>&copy; Todos los derechos reservados creaTáctil. </label></strong><a href="" onClick="window.open('http://rcgt.creatactil.com/politica de privacidad/index.html','_blank','location=no','closebuttoncaption=Return')">Aviso Legal y Política de Privacidad</a></center>     
+	</div>
+    
+     <!--footer-->  
+    <div data-role="footer" data-theme="a" data-position="fixed" >
+    
+    
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
+    <li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
+    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
+    </ul>
+	</div>
+   
+    
+    </div>
+   
+  
+	 
+</div> 
+<!----------------------------PAGINA 6-------------------------------->
+<div data-role="page" id="page6" data-theme="a" >
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>  
+	  <h1>FICHERO COMUNITARIO</h1>
+	</div> 
+	
+	 <div data-role="content" id="contenfichero" >
+			
+		  
+       
+       
+	</div>
+   
+    <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
+    <li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
+    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#page5" data-transition="slide" data-icon="info" style="text-shadow:none">Ayuda</a></li> 
+    </ul>
+	</div>
+ 
+    </div>
+ 
+</div>
+
+<!----------------------------PAGINA 7-------------------------------->
+<div data-role="page" id="page7" data-theme="a" >
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+    <div data-role="header" data-theme="a"> 
+     
+	  <h1>Política de Privacidad y LOPD</h1>
+	</div> 
+	
+	 <div data-role="content" id="ley">
+     			<center>
+            <div data-role="controlgroup" data-type="horizontal">
+             <a href="#pagina0" data-role="button" data-icon="back">Cancelar</a>
+			<a href="#page2" data-role="button" data-icon="check">Aceptar</a>
+            </div>
+            </center>
+     
+     
+			<p>
+            <strong>POLÍTICA DE TRATAMIENTO DE DATOS DE CARÁCTER PERSONAL </strong><br>
+            En cumplimiento de lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, se pone en conocimiento de los usuarios de este sitio web lo siguiente: <br>
+            
+<strong>1.</strong> Los datos que los usuarios faciliten a CREATÁCTIL S.L. serán incorporados a una base de datos de la que es titular y responsable CREATÁCTIL S.L., CIF B76629021.<br>
+<strong>2.</strong> Los usuarios garantizarán los datos de carácter personal, su veracidad, exactitud, autenticidad y vigencia. En este sentido, será obligación de los usuarios mantener actualizados los datos de forma tal que correspondan a la realidad en cada momento.<br>
+<strong>3.</strong> Al facilitar datos de carácter personal a CREATÁCTIL S.L., mediante la cumplimentación de formularios de recogida de datos o su envío a través de cualquier otro medio, los usuarios declaran aceptar plenamente y sin reservas la incorporación de los datos facilitados a los ficheros de la mercantil CREATÁCTIL S.L. y su tratamiento automatizado, en los términos estipulados en el presente documento.
+Los citados ficheros están oportunamente comunicados e inscritos en el Registro General de la Agencia española de Protección de Datos, al que los usuarios pueden acceder gratuitamente si así lo desean para comprobar su situación.<br> 
+<strong>4.</strong> La recogida de datos personales y su tratamiento automatizado tiene como finalidad posibilitar o facilitar la gestión, administración, mejora y ampliación de los distintos servicios, la elaboración de estadísticas, la gestión o seguimiento de incidencias, o servicios ofrecidos por info@creatactil.com.<br>
+<strong>5.</strong> CREATÁCTIL S.L en ningún caso venderá ni arrendará datos personales de los usuarios. El usuario podrá denegar o revocar su consentimiento mediante el envío de un e-mail a info@creatactil.com.<br>
+<strong>6.</strong> Los usuarios podrán ejercitar, en cualquier momento, los derechos de acceso, rectificación, cancelación y oposición de sus datos personales. El ejercicio de estos derechos podrá efectuarse mediante el envío de un e-mail a info@creatactil.com.<br>
+<strong>7.</strong> CREATÁCTIL S.L se compromete a no recabar información innecesaria sobre sus usuarios, a tratar con extrema diligencia la información personal que le puedan facilitar, y a cumplir en cualquier fase del tratamiento con la obligación de guardar secreto respecto de los datos facilitados por los usuarios. 
+Asimismo, CREATÁCTIL S.L se compromete a adoptar en todo momento los niveles de seguridad legalmente requeridos, para evitar la pérdida, mal uso, alteración, acceso no autorizado o robo de datos personales, implementando a dicho fin todos los medios y sistemas técnicos a su alcance, habida cuenta del estado de la tecnología, la naturaleza de los datos almacenados y los riesgos a que están expuestos, ya provengan de la acción humana o del medio físico o natural. Ello no obstante, los usuarios deben ser conscientes de que las medidas de seguridad en Internet no son inexpugnables, y asumir los riegos que ello conlleva. <br>
+<strong>8.</strong> CREATÁCTIL S.L se reserva el derecho de modificar en cualquier momento su política de tratamiento y seguridad de datos personales, siempre respetando la legislación vigente en materia de protección de datos, y previa comunicación a los interesados, bien mediante publicación en esta misma página o en cualquier otro lugar del website, bien mediante e-mail a los interesados, o por cualquier otro medio de comunicación o difusión que se considere oportuno.<br>
+<strong>9.</strong> CREATÁCTIL S.L, le informa sobre la cesión de los datos de los usuarios a ICI-TACO.
+La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar los derechos de acceso, rectificación, cancelación u oposición según dispone en el apartado 6.
+</p>
+		
+
+  </div>
+    
+ 
+</div>
+<!----------------------------PAGINA 8------------------------------->
+<div data-role="page" id="page8" data-theme="a">
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>
+		<h1 style=" margin-left:20px; margin-right:20px">PÁGINA DE CONTACTO</h1>
+	</div>
+	
+    <div data-role="content">	
+		<center>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.868117265114!2d-16.298115185509648!3d28.445319907374085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41ccde3168efe1%3A0xf421dd1400ad39bb!2sCalle+Candelaria%2C+2%2C+38108+San+Crist%C3%B3bal+de+La+Laguna%2C+Santa+Cruz+de+Tenerife!5e1!3m2!1ses!2ses!4v1452514609122" width="98%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </center>
+		<p>
+            <a href="#" data-role="button" data-icon="bullets" data-iconpos="notext" data-inline="true"></a><strong>Dirección</strong><br>
+   	  <ul>
+                 <li>Centro Ciudadano San Luis Gonzaga</li>
+                 <li>Calle Candelaria, 2 38108</li>
+                 <li>San Cristobal de la Laguna</li>
+      </ul>                
+            <a href="#" data-role="button" data-icon="phone" data-iconpos="notext" data-inline="true"></a><strong>Teléfonos</strong>
+ 			<ul>
+    			<li> Whatsapp comunitario: <a href="tel:646569589">646 569 589</a></li>
+    		</ul>   
+            <a href="#" data-role="button" data-icon="mail" data-iconpos="notext" data-inline="true"></a><strong>Correo</strong>
+ 			<ul>
+            	<li> Correo de contacto: <a href="mailto:icitaco@gmail.com">icitaco@gmail.com</a></li>
+    		</ul>
+            </p>
+		         
+	</div>
+    
+  <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
+    <li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
+    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
+    </ul>
+	</div>
+ 
+  </div>
+	 
+</div> 
+
+<!-------------------------------------PAGiNA 9---------------------------------------------------------------------->
+<div data-role="page" data-theme="a" id="page9">
+		
+		<div data-role="header">
+       <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a">Atrás</a>
+       <h1>Agenda</h1>
+        <a id="setDate" data-role="button"  data-inline="true">Hoy</a>
+      </div>
+	
+    	
+      <div data-role="main" class="contenedorcalendario">
+      		<center>
+            <div id="micalendario" class="micalendario"></div>
+            
+          
+            
+            <textarea id="evento"></textarea>
+            
+            <div class="agenda">
+            <input type="hidden" id="fechasel"/>
+            	<ul data-role="listview" id="listadeeventos" name="listadeeventos" style="margin-top:2%">
+                        
+                </ul>
+            
+            </div>
+            </center>
+            
+      </div>
+		
+      <!--footer-->  
+    <div data-role="footer" data-theme="b" data-position="fixed" >
+        <div data-role="navbar" >
+            <ul>
+               	<li><a href="#page1" data-theme="b" data-role="button" onClick="" data-icon="home">Inicio</a></li>
+              	<li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
+    			<li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
+    			<li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+                <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
+            </ul>
+        </div>
+    </div>
+  
+</div> 
+<!---------------FIN PAGINA 9----------------------------------------------------------------> 
+<!--------------- PAGINA FC-------------------------------------------------------------->
+<div data-role="page" id="fc">
+  <div data-role="header" data-position="fixed">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a">Atrás</a>
+    <h1 style="margin:0">Fichero Comunitario</h1>
+  </div>
+  <div data-role="content">
+  
+   <div id="mapatodo" style="width:100%; height:200px;">
+      
+    
+    </div><!--mapa-->
+  
+   <br>
+		<label style="font-weight:bold">Realiza búsqueda por categorías</label>
+      <a href="" data-role="button" data-iconpos="left" data-icon="plus" onClick="listatodos()" style="text-align:left; background-color:#a1c037">Todos</a>
+         
+   <div data-role="collapsible" data-inset="true" class="turquesa">
+         <h4>Barrios</h4>
+         <ul id="listabarrios" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-filter="true" data-filter-placeholder="Busca por texto..." >
+         
+       	</ul>
+    </div>
+    <div data-role="collapsible" data-inset="true" class="turquesa" >
+         <h4>Municipios</h4>
+         <ul id="listamunicipios" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-filter="true" data-filter-placeholder="Busca por texto...">
+         
+       	</ul>
+    </div>
+    <div data-role="collapsible" data-inset="true" class="turquesa">
+         <h4>Tipología sujeto</h4>
+         <ul id="listatipologia" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-filter="true" data-filter-placeholder="Busca por texto...">
+         
+       	</ul>
+    </div>
+    <div data-role="collapsible" data-inset="true" class="turquesa">
+         <h4>Protagonista</h4>
+         <ul id="listaprotagonista" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-filter="true" data-filter-placeholder="Busca por texto...">
+         
+       	</ul>
+    </div>
+    <div data-role="collapsible" data-inset="true" class="turquesa">
+         <h4>Sectores</h4>
+         <ul id="listasujeto" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-filter="true" data-filter-placeholder="Busca por texto...">
+         
+       	</ul>
+    </div>
+  
+  
+  </div><!--fin contenido-->
+  
+  
+  
+  
+  
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+    <ul>
+    <li><a href="#page1" data-theme="b" data-role="button" onClick="" data-icon="home">Inicio</a></li>
+    <li><a href="#page9" data-role="button" onClick="listafechas()" data-icon="calendar" >Agenda</a></li>
+    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
+    </ul>
+	</div>
+  </div>
+</div>
+<!---------------FIN PAGINA FC------------------------------------------------------------->
+
+<!--------------- PAGINA entidad-------------------------------------------------------------->
+<div data-role="page" id="entidad">
+  <div data-role="header" data-position="fixed">
+    <a href="#fc" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a">Atrás</a>
+    <h1 style="margin:0">Lista Entidades</h1>
+  </div>
+  <div data-role="content">
+  
+   <div  data-inset="true" class="turquesa">
+         
+         <ul id="listaentidad" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-filter="true" data-filter-placeholder="Buscar por Nombre...">
+         
+       	</ul>
+    </div>
+    
+  
+  </div><!--fin contenido-->
+  
+  
+  
+  
+  
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" data-theme="b" data-role="button" onClick="" data-icon="home">Inicio</a></li>
+    <li><a href="#page9" data-role="button" onClick="listafechas()" data-icon="calendar" >Agenda</a></li>
+    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
+    </ul>
+	</div>
+  </div>
+</div>
+<!---------------FIN PAGINA FC------------------------------------------------------------->
+<!-------------------------------------------INICIO MAPA-->
+<div data-role="page" id="mapa">
+  <div data-role="header" data-position="fixed">
+    <a href="#entidad" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a">Atrás</a>
+    <h1>Entidad</h1>
+  </div>
+  <div data-role="content">
+  
+    <div id="map" style="width:100%; height:200px;">
+      
+    
+    </div><!--mapa-->
+    <div id="contacto">
+    <table style="width:100%">
+  <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Entidad: </td>
+    <td id="nombreentidad" class="td1"></td> 
+  </tr>
+  <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Direccion:</td>
+    <td id="direccionentidad"></td> 
+  </tr>
+  <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">C. Postal:</td>
+    <td id="CPentidad"></td> 
+  </tr>
+  <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Barrio:</td>
+    <td id="barrioentidad"></td> 
+  </tr>
+  <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Municipio:</td>
+    <td id="municipioentidad"></td> 
+  </tr>
+  <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Facebook:</td>
+    <td id="facebookentidad" ></td> 
+  </tr>
+</table>
+    <center><a data-role="button" style="width:30%" onClick="compartir()">Compartir</a></center>
+    
+    </div><!--fin contacto-->
+    
+     
+    
+  </div><!--Fin Contenido-->
+  
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" data-theme="b" data-role="button" onClick="" data-icon="home">Inicio</a></li>
+    <li><a href="#page9" data-role="button" onClick="listafechas()" data-icon="calendar" >Agenda</a></li>
+    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
+    </ul>
+	</div>
+  </div>
+</div>
+<!---------------------------------------------------FIN MAPA-------->
+
+<!---------------------------- PAGINA 11 -------------------------------->
+<div data-role="page" id="page11" data-theme="a" >
+	<!--<div style="height:20px; visibility:hidden"> </div>-->
+    <div data-role="header" data-theme="a">  
+	  <h1>FIRMAR</h1>
+	</div> 
+	
+	 <div data-role="content" id="firma">
+	   <p>
+           <strong>Titulo: </strong><span id="titulofirma" ></span>
+	   		<br>
+            <br>
+           	Nº de registro: <span id="registrofirma" ></span>
+            <br>
+            <span id="codigofirma" hidden="true"></span>
+	   </p>
+		
+		 
+	   	    
+            <center>
+            <div data-role="controlgroup" data-type="horizontal">
+             <a href="#page1" data-role="button"  data-icon="back">Rechazar</a>
+			<a href="#" data-role="button" onClick="firma()" data-icon="check">Aceptar</a>
+            </div>
+            </center>
+            </div>
+    
+ 
+</div>
+<!----------------- FIN PAGINA 11 -------------------->
+
+
+
+<!---------------------------- PAGINA 14 -------------------------------->
+
+<div data-role="page" id="page14" data-theme="a" >
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header"  data-theme="a">   
+	  <a href="#page1" data-role="button" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a" >Atrás</a>
+      <h1>FAVORITOS</h1>
+	
+    </div> 
+	
+	 <div data-role="content" id="contenido14">
+			
+		   <!-- Aqui se añade el listado de mensajes -->
+		  <ul data-role="listview"  id="listafav"  data-inset="true">
+		  </ul>
+          
+           <ul data-role="listview"  id="listafav1"  data-inset="true" >
+		  </ul>
+	 		<center><div id="carga14"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>
+    		<br><br><br><br><br><br><br><br>
+</div> 
+     
+    <!--Pie de pagina -->
+ <div data-role="footer" data-theme="a" data-position="fixed" id="piepagina14">
+    
+    </div>
+   <!--Final Pie de pagina -->
+    
+ 
+</div>
+<!---------------------------- FIN PAGINA 14 --------------------------------> 
+
+<!---------------------------------  PAGE 15  ------------------------------->
+<div data-role="page" data-theme="a" id="page15">
+		<!--<div style="height:20px; visibility:hidden"> </div>--> 
+       <div data-role="header">
+      <a class="ui-btn-left" data-mini="true" href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a"></a>
+       <h1>WEB</h1>
+        
+      </div>
+	
+      <div data-role="main" class="contenedorredes" >
+      
+      	<ul data-role="listview" data-inset="true"  style="padding:5%;">
+    	<li><a style="background-color:#ffffff" onClick="window.open('http://www.yosoytaco.org/','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes');">
+        	<img src="imagenes/icono2.png">
+    		<h2 style="color:#A7A7A7">Web yosoytaco</h2>
+    		<p style="color:#A7A7A7">http://www.yosoytaco.org</p></a>
+    	</li>
+    	<li><a style="background-color:#ffffff" onClick="window.open('https://www.facebook.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes');">
+        	<img src="imagenes/face.png">
+    		<h2 style="color:#A7A7A7">Facebook</h2>
+    		<p style="color:#A7A7A7">https://www.facebook.com/icitaco</p></a>
+    	</li>
+    	<li><a style="background-color:#ffffff" onClick="window.open('https://www.flickr.com/photos/yosoytaco/collections','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes');">
+        	<img src="imagenes/flickr.png">
+    		<h2 style="color:#A7A7A7">Flickr</h2>
+    		<p style="color:#A7A7A7">https://www.flickr.com/photos/yosoytaco/collections</p></a>
+    	</li>
+		<li><a style="background-color:#ffffff" onClick="window.open('RUTA COMPARTIR','_system');">
+        	<img src="imagenes/compartir.jpg">
+    		<h2 style="color:#A7A7A7">Compartir app</h2>
+    		<p style="color:#A7A7A7"></p></a>
+    	</li>
+        
+        </ul>
+      
+          
+              
+      		
+      </div>
+
+      <!--footer-->  
+     <!--footer-->  
+    <div data-role="footer" data-theme="a" data-position="fixed" >
+    	<div data-role="navbar" >
+   			 <ul>
+   				<li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
+    			<li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
+    			<li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
+    			<li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    			<li><a href="#page5" data-transition="slide" data-icon="info" style="text-shadow:none">Ayuda</a></li>
+    		</ul>
+		</div>
+    </div>
+  
+</div> 
+<!---------------FIN PAGE 15----------------------------------------------------------------> 
+
+  
+</body>
+</html>
+
