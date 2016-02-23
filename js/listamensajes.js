@@ -79,7 +79,7 @@ function crearLista() {
 								  '<br>'+
 								  '<br>'+
 								  '<br>'+
-								  '<a href="#page11" style="color:#006837"  data-rel="dialog" onClick="textofirma(\''+item.registro+'\' ), textofirma2(\''+item.titulo+'\' )">'+item.firma+'</a>'+
+								  '<a href="#page11" style="color:#006837"  data-transition="pop" onClick="textofirma(\''+item.registro+'\',\''+item.titulo+'\')">'+item.firma+'</a>'+
 								   '<br>'+
 								  '<br>'+
 								  '</div>' +
@@ -109,7 +109,7 @@ function crearLista() {
 		'<a href="#page1" data-theme="b" data-role="button" data-icon="home" class="ui-link ui-btn ui-btn-b ui-icon-home ui-btn-icon-top ui-shadow ui-corner-all" role="button">Inicio</a></li>'+
           '<li class="ui-block-b">'+
 		  '<a href="#" data-role="button" onclick="lasesion()" data-icon="mail" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top ui-shadow ui-corner-all" role="button"><img class="globo" style="float:left; width:14px;" src="http://icitacoapp.creatactil.com/imgportada/0.png">Mensajes</a></li>'+
-    	'<li class="ui-block-c"><a data-role="button" onclick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px " class="ui-link ui-btn ui-shadow ui-corner-all" role="button">Fichero<br>Comunitario</a></li>'+
+    	'<li class="ui-block-c"><a data-role="button" onclick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:0.5px; padding-right:0.5px; " class="ui-link ui-btn ui-shadow ui-corner-all" role="button">Fichero<br>Comunitario</a></li>'+
     	'<li class="ui-block-d"><a onclick="window.open(\''+biblioteca+');" data-role="button" data-transition="slide" data-icon="info" class="ui-link ui-btn ui-icon-info ui-btn-icon-top ui-shadow ui-corner-all" role="button">Biblioteca</a></li>'+
         '<li class="ui-block-e"><a href="#page15" data-role="button" data-transition="slide" data-icon="plus" class="ui-link ui-btn ui-icon-plus ui-btn-icon-top ui-shadow ui-corner-all" role="button">Más</a></li>'+
     '</ul>'+
@@ -182,39 +182,25 @@ function contador(registro){
 	}
 	
 
-function textofirma(registro){
+function textofirma(registro, titulo){
+	
 	
 	$("#registrofirma").text(registro);
-
-	}
-	
-function textofirma2(nombre){
-
-	$("#titulofirma").text(nombre);
+	$("#titulofirma").text(titulo);
 	
 	}
 	
-function textofirma3(cial){
-	
-	$("#cialfirma").text(cial);
 
-	}
-	
-function textofirma4(codigo){
-	
-	$("#codigofirma").text(codigo);
-
-	}
 	
 	//DESCARGA DE ARCHIVO AL MOVIL FILE TRANSFER
 function descargarArchivo(nombre){
 	
 	            
-                var server = "http://rcgt.creatactil.com/files/";
+                var server = "http://icitaco.creatactil.com/files/";
                 var filename = nombre;
                 var uri = encodeURI(server + filename);
                 
-
+				abrirfichero(uri);
 
                 window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onErrorCallback);
 
@@ -222,7 +208,7 @@ function descargarArchivo(nombre){
                     
                     // alert("got filesystem");
 
-                    fileSystem.root.getDirectory('RCGT',
+                    fileSystem.root.getDirectory('ICITACO',
                         { create:true },
                         transferFile,
                         onErrorCallback
@@ -239,7 +225,7 @@ function descargarArchivo(nombre){
                     console.log(dir.toURL());
                     console.log(uri);
 					
-					abrirfichero(uri);   //modificacion por path  
+					   //modificacion por path  
 					
                     path = dir.toURL() + '/' + filename;//AQUI ES EL CAMBIO de fullpath por toURL()
 					
@@ -275,7 +261,7 @@ function descargarArchivo(nombre){
 function abrirfichero(ruta3){
 	
 	console.log(ruta3);
-	window.open (ruta3, '_system', 'location=yes,closebuttoncaption=done,enableViewportScale=yes');
+	window.open (ruta3, '_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes');
 	
 	
 	}

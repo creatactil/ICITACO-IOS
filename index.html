@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" sizes="114x114" href="114.png" />
 <link rel="apple-touch-icon" sizes="144x144" href="144.png" />
 
-	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="PushNotification.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	
@@ -90,6 +90,9 @@
 }
 .ui-navbar li .ui-btn{
 	font-size:11px;
+	}
+.globo{
+	margin-top:-20px;
 	}
 
 /*ordenador zoom bajo*/
@@ -171,7 +174,7 @@ and (max-width: 450px){
     <li data-icon="calendar"><a href="#" onClick="listafechas()" style="text-shadow:none">Agenda</a></li>
     <li data-icon="mail" ><a onClick="lasesion()" style="text-shadow:none">Mensajes</a></li>
     <li data-icon="bullets"><a onClick="lasesion2()" style="text-shadow:none">Fichero Comunitario</a></li>
-    <li data-icon="info"><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-transition="slide" style="text-shadow:none">Biblioteca</a></li>
+    <li data-icon="info"><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-transition="slide" style="text-shadow:none">Biblioteca</a></li>
     <li data-icon="navigation"><a href="#page15" data-transition="slide" style="text-shadow:none">Web y Redes Sociales</a></li>
     <li data-icon="info"><a href="#page5" data-transition="slide" style="text-shadow:none">Ayuda</a></li>
     <li data-icon="info"><a href="#page8" data-transition="slide" style="text-shadow:none">Contacto</a></li>
@@ -210,9 +213,9 @@ App Diseñada por creaTáctil S.L.
     <div data-role="navbar" >
     <ul>
     <li><a href="#page9" data-role="button" onClick="listafechas()" data-icon="calendar" >Agenda</a></li>
-    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
-    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
-    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px; margin-top:-20px" >Mensajes</a></li>
+    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:0.5px; padding-right:0.5px; ">Fichero<br>Comunitario</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
     <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
     </ul>
 	</div>
@@ -447,9 +450,9 @@ App Diseñada por creaTáctil S.L.
     <div data-role="navbar" >
     <ul>
     <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
-    <li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
-    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
-    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px; margin-top:-20px" >Mensajes</a></li>
+    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:0.5px; padding-right:0.5px; ">Fichero<br>Comunitario</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
     <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
     </ul>
 	</div>
@@ -479,9 +482,9 @@ App Diseñada por creaTáctil S.L.
     <div data-role="navbar" >
     <ul>
     <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
-    <li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
-    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
-    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px; margin-top:-20px" >Mensajes</a></li>
+    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:0.5px; padding-right:0.5px; ">Fichero<br>Comunitario</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
     <li><a href="#page5" data-transition="slide" data-icon="info" style="text-shadow:none">Ayuda</a></li> 
     </ul>
 	</div>
@@ -565,9 +568,9 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     <div data-role="navbar" >
     <ul>
     <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
-    <li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
-    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
-    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px; margin-top:-20px" >Mensajes</a></li>
+    <li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:0.5px; padding-right:0.5px; ">Fichero<br>Comunitario</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
     <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
     </ul>
 	</div>
@@ -610,9 +613,9 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
         <div data-role="navbar" >
             <ul>
                	<li><a href="#page1" data-theme="b" data-role="button" onClick="" data-icon="home">Inicio</a></li>
-              	<li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
-    			<li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
-    			<li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+              	<li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px; margin-top:-20px" >Mensajes</a></li>
+    			<li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:0.5px; padding-right:0.5px; ">Fichero<br>Comunitario</a></li>
+    			<li><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
                 <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
             </ul>
         </div>
@@ -635,7 +638,7 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
   
    <br>
 		<label style="font-weight:bold">Realiza búsqueda por categorías</label>
-      <a href="" data-role="button" data-iconpos="left" data-icon="plus" onClick="listatodos()" style="text-align:left; background-color:#a1c037">Todos</a>
+      <a href="" data-role="button" data-iconpos="left" data-icon="plus" onClick="listatodos()" style="text-align:left; background-color:#2DA073">Todos</a>
          
    <div data-role="collapsible" data-inset="true" class="turquesa">
          <h4>Barrios</h4>
@@ -680,8 +683,8 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     <ul>
     <li><a href="#page1" data-theme="b" data-role="button" onClick="" data-icon="home">Inicio</a></li>
     <li><a href="#page9" data-role="button" onClick="listafechas()" data-icon="calendar" >Agenda</a></li>
-    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
-    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px; margin-top:-20px" >Mensajes</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
     <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
     </ul>
 	</div>
@@ -716,8 +719,8 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     <ul>
     <li><a href="#page1" data-theme="b" data-role="button" onClick="" data-icon="home">Inicio</a></li>
     <li><a href="#page9" data-role="button" onClick="listafechas()" data-icon="calendar" >Agenda</a></li>
-    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
-    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px; margin-top:-20px" >Mensajes</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
     <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
     </ul>
 	</div>
@@ -776,8 +779,8 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     <ul>
     <li><a href="#page1" data-theme="b" data-role="button" onClick="" data-icon="home">Inicio</a></li>
     <li><a href="#page9" data-role="button" onClick="listafechas()" data-icon="calendar" >Agenda</a></li>
-    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
-    <li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    <li><a data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px; margin-top:-20px" >Mensajes</a></li>
+    <li><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
     <li><a href="#page15" data-role="button" data-transition="slide" data-icon="plus">Más</a></li>
     </ul>
 	</div>
@@ -787,17 +790,19 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 
 <!---------------------------- PAGINA 11 -------------------------------->
 <div data-role="page" id="page11" data-theme="a" >
-	<!--<div style="height:20px; visibility:hidden"> </div>-->
+	<div style="height:20px; visibility:hidden"> </div>
     <div data-role="header" data-theme="a">  
 	  <h1>FIRMAR</h1>
 	</div> 
 	
 	 <div data-role="content" id="firma">
 	   <p>
-           <strong>Titulo: </strong><span id="titulofirma" ></span>
-	   		<br>
+           Por favor presione <strong>Aceptar</strong> su quiere confimar su asistencia:
             <br>
-           	Nº de registro: <span id="registrofirma" ></span>
+            <br>
+            <strong>Titulo: </strong><span id="titulofirma" ></span>
+	   		<br>
+            <strong>Nº de registro: </strong><span id="registrofirma" ></span>
             <br>
             <span id="codigofirma" hidden="true"></span>
 	   </p>
@@ -896,9 +901,9 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     	<div data-role="navbar" >
    			 <ul>
    				<li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
-    			<li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px;" >Mensajes</a></li>
-    			<li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:5px; padding-right:5px ">Fichero<br>Comunitario</a></li>
-    			<li><a onClick="window.open('https://issuu.com/icitaco','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
+    			<li><a href="#" data-role="button" onClick="lasesion()" data-icon="mail"><img class="globo" style="float:left; width:14px; margin-top:-20px" >Mensajes</a></li>
+    			<li><a data-role="button" onClick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:0.5px; padding-right:0.5px; ">Fichero<br>Comunitario</a></li>
+    			<li><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-role="button" data-transition="slide" data-icon="info">Biblioteca</a></li>
     			<li><a href="#page5" data-transition="slide" data-icon="info" style="text-shadow:none">Ayuda</a></li>
     		</ul>
 		</div>

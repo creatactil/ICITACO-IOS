@@ -1,6 +1,6 @@
 function firma(){
 	
-	var xnumero4 = localStorage.numero;
+	var xmovil4 = localStorage.movil;
 	var xregistro4 = $("#registrofirma").text();
 	
 	
@@ -8,7 +8,7 @@ function firma(){
 		url: 'http://icitacoapp.creatactil.com/php/firma.php',
 		type: 'POST',
 		timeout: 5000,
-		data: {numero: xnumero4, registro: xregistro4},
+		data: {movil: xmovil4, registro: xregistro4},
 		cache: false,
 		dataType: "text",
 		success: onSuccess
