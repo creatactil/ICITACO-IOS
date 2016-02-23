@@ -54,6 +54,11 @@ function registrarColegiado() {
 		$("#municipio").focus();
 		return false;
 		
+		}else if(xcodpostal ==  ""){
+		alert("Escriba su municipio ");
+		$("#municipio").focus();
+		return false;
+		
 		}else if(xsexo ==  ""){
 		alert("Elija su sexo ");
 		$("#sexo").focus();
