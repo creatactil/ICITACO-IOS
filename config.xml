@@ -79,7 +79,7 @@
 		<plugin name="org.apache.cordova.network-information" source="pgb" spec="0.2.12" />
 		<plugin name="org.apache.cordova.splashscreen" source="pgb" spec="0.3.4" />
 		<plugin name="org.apache.cordova.vibration" source="pgb" spec="0.3.11" />
-		
+		<plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
 
    
 		<feature name="http://api.phonegap.com/1.0/file"/>
