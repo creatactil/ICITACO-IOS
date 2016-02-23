@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" sizes="114x114" href="114.png" />
 <link rel="apple-touch-icon" sizes="144x144" href="144.png" />
 
-	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="PushNotification.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	
@@ -165,7 +165,7 @@ and (max-width: 450px){
 
 <!----------------------------PAGINA 1-------------------------------->
 <div data-role="page" id="page1" data-theme="a" >  
-	<div style="height:20px; visibility:hidden"> </div>
+	<div style="height:20px; visibility:hidden"></div>
  <div data-role="panel" id="overlayPanel" data-display="overlay" data-theme="a"> 
     <h3>Menú</h3>
     <div style="width:98%" data-theme="a">
@@ -229,7 +229,8 @@ App Diseñada por creaTáctil S.L.
 
 <!-------------------------------------PAGINA 0---------------------------------------------------------------------->
 <div data-role="page" data-theme="a" id="pagina0">
-	<div style="height:20px; visibility:hidden"> </div><div data-role="header">
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header">
   <a class="ui-btn-left" data-mini="true" href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a"></a>
    <h1>YO SOY TACO</h1> 
   </div>
@@ -269,7 +270,8 @@ App Diseñada por creaTáctil S.L.
 
 <!----------------------------PAGINA 2-------------------------------->
 <div data-role="page" id="page2" data-theme="a">
-	<div style="height:20px; visibility:hidden"> </div><div data-role="header" data-theme="a">
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header" data-theme="a">
     
     <a class="ui-btn-left" data-mini="true" href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a"></a>
        		<h1>REGISTRO</h1>
@@ -373,7 +375,8 @@ App Diseñada por creaTáctil S.L.
 
 <!----------------------------PAGINA 4-------------------------------->
 <div data-role="page" id="page4" data-theme="a">
-	<div style="height:20px; visibility:hidden"> </div><div data-role="header" data-theme="a">   
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header" data-theme="a">   
 	  <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a">Atrás</a>
       <h1>Mensajes</h1>
 	<!--<a href="#page1" data-role="button" data-icon="home" onClick="inicio()">Inicio</a> -->
@@ -406,7 +409,8 @@ App Diseñada por creaTáctil S.L.
 </div>
 <!----------------------------PAGINA 5-------------------------------->
 <div data-role="page" id="page5" data-theme="a">
-	<div style="height:20px; visibility:hidden"> </div><div data-role="header" data-theme="a">
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header" data-theme="a">
     <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>
 		<h1 style=" margin-left:20px; margin-right:20px">PÁGINA DE AYUDA</h1>
 	</div>
@@ -461,7 +465,8 @@ App Diseñada por creaTáctil S.L.
 </div> 
 <!----------------------------PAGINA 6-------------------------------->
 <div data-role="page" id="page6" data-theme="a" >
-	<div style="height:20px; visibility:hidden"> </div><div data-role="header" data-theme="a">
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header" data-theme="a">
     <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>  
 	  <h1>FICHERO COMUNITARIO</h1>
 	</div> 
@@ -490,7 +495,8 @@ App Diseñada por creaTáctil S.L.
 
 <!----------------------------PAGINA 7-------------------------------->
 <div data-role="page" id="page7" data-theme="a" >
-	<div style="height:20px; visibility:hidden"> </div><div data-role="header" data-theme="a"> 
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header" data-theme="a"> 
      
 	  <h1>Política de Privacidad y LOPD</h1>
 	</div> 
@@ -529,7 +535,8 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 </div>
 <!----------------------------PAGINA 8------------------------------->
 <div data-role="page" id="page8" data-theme="a">
-	<div style="height:20px; visibility:hidden"> </div><div data-role="header" data-theme="a">
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header" data-theme="a">
     <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>
 		<h1 style=" margin-left:20px; margin-right:20px">PÁGINA DE CONTACTO</h1>
 	</div>
@@ -574,7 +581,7 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 
 <!-------------------------------------PAGiNA 9---------------------------------------------------------------------->
 <div data-role="page" data-theme="a" id="page9">
-		
+		<div style="height:20px; visibility:hidden"></div>
 		<div data-role="header">
        <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a">Atrás</a>
        <h1>Agenda</h1>
@@ -618,6 +625,7 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 <!---------------FIN PAGINA 9----------------------------------------------------------------> 
 <!--------------- PAGINA FC-------------------------------------------------------------->
 <div data-role="page" id="fc">
+	<div style="height:20px; visibility:hidden"></div>
   <div data-role="header" data-position="fixed">
     <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a">Atrás</a>
     <h1 style="margin:0">Fichero Comunitario</h1>
@@ -687,6 +695,7 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 
 <!--------------- PAGINA entidad-------------------------------------------------------------->
 <div data-role="page" id="entidad">
+	<div style="height:20px; visibility:hidden"></div>
   <div data-role="header" data-position="fixed">
     <a href="#fc" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a">Atrás</a>
     <h1 style="margin:0">Lista Entidades</h1>
@@ -722,6 +731,7 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 <!---------------FIN PAGINA FC------------------------------------------------------------->
 <!-------------------------------------------INICIO MAPA-->
 <div data-role="page" id="mapa">
+	<div style="height:20px; visibility:hidden"></div>
   <div data-role="header" data-position="fixed">
     <a href="#entidad" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a">Atrás</a>
     <h1>Entidad</h1>
@@ -783,7 +793,7 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 
 <!---------------------------- PAGINA 11 -------------------------------->
 <div data-role="page" id="page11" data-theme="a" >
-	<div style="height:20px; visibility:hidden"> </div>
+	<div style="height:20px; visibility:hidden"></div>
     <div data-role="header" data-theme="a">  
 	  <h1>FIRMAR</h1>
 	</div> 
@@ -819,7 +829,8 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 <!---------------------------- PAGINA 14 -------------------------------->
 
 <div data-role="page" id="page14" data-theme="a" >
-	<div style="height:20px; visibility:hidden"> </div><div data-role="header"  data-theme="a">   
+	<div style="height:20px; visibility:hidden"></div>
+    <div data-role="header"  data-theme="a">   
 	  <a href="#page1" data-role="button" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a" >Atrás</a>
       <h1>FAVORITOS</h1>
 	
@@ -849,7 +860,8 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 
 <!---------------------------------  PAGE 15  ------------------------------->
 <div data-role="page" data-theme="a" id="page15">
-		<div style="height:20px; visibility:hidden"> </div><div data-role="header">
+		<div style="height:20px; visibility:hidden"></div>
+        <div data-role="header">
       <a class="ui-btn-left" data-mini="true" href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a"></a>
        <h1>WEB</h1>
         
