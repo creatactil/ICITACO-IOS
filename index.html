@@ -166,27 +166,26 @@ and (max-width: 450px){
 <!----------------------------PAGINA 1-------------------------------->
 <div data-role="page" id="page1" data-theme="a" >  
 	<div style="height:20px; visibility:hidden"></div>
- <div data-role="panel" id="overlayPanel" data-display="overlay" data-theme="a"> 
+ <div data-role="panel" id="overlayPanel" data-display="overlay" data-theme="a" style="margin-top:20px"> 
     <h3>Menú</h3>
     <div style="width:98%" data-theme="a">
 <ul data-role="listview">
-    <li data-icon="user" ><a href="#" onClick="mostrarDatos()" style="text-shadow:none">Registro</a></li>
-    <li data-icon="calendar"><a href="#" onClick="listafechas()" style="text-shadow:none">Agenda</a></li>
-    <li data-icon="mail" ><a onClick="lasesion()" style="text-shadow:none">Mensajes</a></li>
-    <li data-icon="bullets"><a onClick="lasesion2()" style="text-shadow:none">Fichero Comunitario</a></li>
-    <li data-icon="info"><a onClick="window.open('https://issuu.com/icitaco/stacks','_blank', 'location=yes,closebuttoncaption=done,enableViewportScale=yes')" data-transition="slide" style="text-shadow:none">Biblioteca</a></li>
-    <li data-icon="navigation"><a href="#page15" data-transition="slide" style="text-shadow:none">Web y Redes Sociales</a></li>
-    <li data-icon="info"><a href="#page5" data-transition="slide" style="text-shadow:none">Ayuda</a></li>
-    <li data-icon="info"><a href="#page8" data-transition="slide" style="text-shadow:none">Contacto</a></li>
-    <li data-icon="power" ><a onClick="desconectar()" style="text-shadow:none">Salir app</a></li>
-    <li data-icon="delete"><a href="#pageone" data-rel="close" style="text-shadow:none">Cerrar menú</a></li>
+    <li data-icon="user" class="limenu" ><a href="#" onClick="mostrarDatos()" style="text-shadow:none">Registro</a></li>
+    <li data-icon="calendar" class="limenu"><a href="#" onClick="listafechas()" style="text-shadow:none">Agenda</a></li>
+    <li data-icon="mail" class="limenu"><a onClick="lasesion()" style="text-shadow:none">Mensajes</a></li>
+    <li data-icon="bullets" class="limenu"><a onClick="lasesion2()" style="text-shadow:none">Fichero Comunitario</a></li>
+    <li data-icon="info" class="limenu"><a onClick="window.open('https://issuu.com/icitaco/stacks','_system')" data-transition="slide" style="text-shadow:none">Biblioteca</a></li>
+    <li data-icon="navigation" class="limenu"><a href="#page15" data-transition="slide" style="text-shadow:none">Web y Redes Sociales</a></li>
+    <li data-icon="info" class="limenu"><a ref="#page5" data-transition="slide" style="text-shadow:none">Ayuda</a></li>
+    <li data-icon="info" class="limenu"><a href="#page8" data-transition="slide" style="text-shadow:none">Contacto</a></li>
+    <li data-icon="power" class="limenu"><a onClick="desconectar()" style="text-shadow:none">Salir app</a></li>
+    <li data-icon="delete" class="limenu"><a href="#pageone" data-rel="close" style="text-shadow:none">Cerrar menú</a></li>
     
 </ul>
 <br>
-<br>
 <center>
-App Diseñada por creaTáctil S.L.
-<a onClick="window.open('http://www.creatactil.com','_blank','location=no','closebuttoncaption=Return')">www.creatactil.com</a>
+<label style="font-size:12px">App Diseñada por creaTáctil S.L.</label>
+<a style="font-size:12px" onClick="window.open('http://www.creatactil.com','_blank','location=no','closebuttoncaption=Return')">www.creatactil.com</a>
 </center>
     </div>
  </div>
@@ -198,7 +197,7 @@ App Diseñada por creaTáctil S.L.
     
     	<h1>YO SOY TACO</h1>
        
-        <a href="" data-role="button" class="ui-btn-right" data-mini="true" data-icon="action" onClick="" data-iconpos="notext"></a>
+        <a href="" data-role="button" class="ui-btn-right" data-mini="true" data-icon="action" onClick="window.open('whatsapp://send?text=Descarga la app de ICI TACO para ANDROID en https://play.google.com/store/apps/details?id=com.creatactil.icitaco para IOS en https://itunes.apple.com/us/app/ici-taco/id1087453225?mt=8', '_system');" data-iconpos="notext"></a>
     </div >
     
      <div id="imgportada" data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; height:100%">
