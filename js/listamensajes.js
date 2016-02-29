@@ -108,7 +108,7 @@ function crearLista() {
         '<li class="ui-block-a">'+
 		'<a href="#page1" data-theme="b" data-role="button" data-icon="home" class="ui-link ui-btn ui-btn-b ui-icon-home ui-btn-icon-top ui-shadow ui-corner-all" role="button">Inicio</a></li>'+
           '<li class="ui-block-b">'+
-		  '<a href="#" data-role="button" onclick="lasesion()" data-icon="mail" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top ui-shadow ui-corner-all" role="button"><img class="globo" style="float:left; width:14px;" src="http://icitacoapp.creatactil.com/imgportada/0.png">Mensajes</a></li>'+
+		  '<a href="#" data-role="button" onclick="lasesion()" data-icon="mail" class="ui-link ui-btn ui-icon-mail ui-btn-icon-top ui-shadow ui-corner-all" role="button"><img class="globo" style="float:left; width:14px; margin-top:-20px" src="http://icitacoapp.creatactil.com/imgportada/0.png">Mensajes</a></li>'+
     	'<li class="ui-block-c"><a data-role="button" onclick="lasesion2()" style="background-color:#03819F; padding-top:14px; padding-bottom:6px; padding-left:0.5px; padding-right:0.5px; " class="ui-link ui-btn ui-shadow ui-corner-all" role="button">Fichero<br>Comunitario</a></li>'+
     	'<li class="ui-block-d"><a onclick="window.open(\''+biblioteca+');" data-role="button" data-transition="slide" data-icon="info" class="ui-link ui-btn ui-icon-info ui-btn-icon-top ui-shadow ui-corner-all" role="button">Biblioteca</a></li>'+
         '<li class="ui-block-e"><a href="#page15" data-role="button" data-transition="slide" data-icon="plus" class="ui-link ui-btn ui-icon-plus ui-btn-icon-top ui-shadow ui-corner-all" role="button">Más</a></li>'+
