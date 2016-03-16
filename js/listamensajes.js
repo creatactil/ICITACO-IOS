@@ -41,15 +41,14 @@ function crearLista() {
 				//color:#BCBCBC;
 				}else{	
 				var tema = "#A4A4A4"; 
-				var listo = "#lista1";}
+				var listo = "#lista";}
 									
 			$(listo).append(			
 		
        		'<li class="ui-li-has-alt ui-li-has-thumb ui-first-child ui-last-child" style="height: 60px"><a href="#" class="ui-btn" onclick="changePage(id_' + index + '), contador(\''+registro+'\'), modificaEstado(\''+registro+'\');" style="height: 60px; padding:0; background-color:#fafafa " >'+
 			'<img src="imagenes/icono.png" class="ui-li-thumb" style="margin-top: 5px; margin-left: 5px; height: 50px">'+
-		'<h2 style="margin-left:60px; margin-top:2px; font-size: 0.8em;  color:'+tema+'" >'+item.titulo+'</h2>'+
-		'<p style="margin-left:60px; padding:0; color:'+verde+'; font-size: 0.7em ">'+'Nº Registro:  '+item.registro+'<br>'+
-    	''+'Fecha: '+''+item.fecha+'</p>'+
+		'<h2 style="margin-left:60px; margin-top:10px; font-size: 0.8em;  color:'+tema+'" >'+item.titulo+'</h2>'+
+		'<p style="margin-left:60px; padding:0; color:'+verde+'; font-size: 0.7em ">'+'Fecha: '+''+item.fecha+'</p>'+
 		
        '<a href="#" data-rel="popup" data-position-to="window" data-transition="pop" aria-haspopup="true" aria-owns="purchase" aria-expanded="false" class="ui-btn ui-btn-icon-notext ui-icon-delete ui-btn-a" onClick="borrarMensaje(\''+item.id_aux+'\' )" style="height: 62px; background-color:#fafafa">'+
 		'</a>'+
@@ -79,7 +78,9 @@ function crearLista() {
 								  '<br>'+
 								  '<br>'+
 								  '<br>'+
-								  '<a href="#page11" style="color:#006837"  data-transition="pop" onClick="textofirma(\''+item.registro+'\',\''+item.titulo+'\')">'+item.firma+'</a>'+
+								  '<center>'+
+								  '<a href="#page11" style="color:#006837; font-size:12px"  data-transition="pop" onClick="textofirma(\''+item.registro+'\',\''+item.titulo+'\')">'+item.firma+'</a>'+
+								   '</center>'+
 								   '<br>'+
 								  '<br>'+
 								  '</div>' +

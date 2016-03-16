@@ -46,13 +46,12 @@ function loginVal2(){
 				
 				
 			});
-			init();
-			comprobarid();
+			
 			}
 		},
 
 });
-
+setTimeout('comprobarid()',8000);
 }
 
 function comprobarid(){
@@ -61,8 +60,8 @@ function comprobarid(){
 	var xuuid = localStorage.uuid;
 	var xmovil = localStorage.movil;
 	
-	
-	$.ajax({
+	if((xregid != "") && (xuuid != "") && (xmovil != "")){
+		$.ajax({
 		url: 'http://icitacoapp.creatactil.com/php/comprobarid.php',
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
@@ -72,5 +71,5 @@ function comprobarid(){
 		
 			});
 	
-	
+	}
 	}

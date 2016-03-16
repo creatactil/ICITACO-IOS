@@ -91,7 +91,7 @@ var app = {
 		
 					localStorage.uuid = uuid;
 					//alert (uuid);
-				
+					globo();
 					console.log(uuid);
 	   			
 					

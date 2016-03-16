@@ -94,6 +94,10 @@
 .globo{
 	margin-top:-20px;
 	}
+a:link   
+{   
+ text-decoration:none;   
+} 
 
 /*ordenador zoom bajo*/
 
@@ -302,7 +306,7 @@ and (max-width: 450px){
         <label for="codpostal">Código postal:</label>
         <input name="codpostal" type="number" maxlength="5" id="codpostal" value="" placeholder="Código postal">
         		
-        <fieldset class="ui-grid-a" data-type="horizontal">
+        <!--<fieldset class="ui-grid-a" data-type="horizontal">
    	
     		<div class="ui-block-a">	
     			<label for="sexo">Sexo:</label>
@@ -319,7 +323,7 @@ and (max-width: 450px){
                     <option value="31-64">Entre 31 y 64</option>
                     <option value="+65">Más de 65</option>
     			</select></div>
-    </fieldset>
+    </fieldset>-->
    
               	
         <label for="correo">Correo electrónico:</label>
@@ -388,10 +392,10 @@ and (max-width: 450px){
 		  
           </ul>
           
-           <ul data-role="listview"  id="lista1"  data-inset="true" >
-		  </ul>
+           <!--<ul data-role="listview"  id="lista1"  data-inset="true" >
+		  </ul>-->
 	 		<center><div id="carga23"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>
-       <br><br><br><br><br><br><br><br>
+       
 </div> 
         
         
@@ -742,7 +746,7 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     
     </div><!--mapa-->
     <div id="contacto">
-    <table style="width:100%">
+    <table style="width:100%; font-size:12px">
   <tr>
     <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Entidad: </td>
     <td id="nombreentidad" class="td1"></td> 
@@ -764,11 +768,24 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     <td id="municipioentidad"></td> 
   </tr>
   <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Móvil:</td>
+    <td ><a id="movilentidad" ></a></td> 
+  </tr>
+  <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Teléfono:</td>
+    <td ><a id="telefonoentidad"></a></td> 
+  </tr>
+  <tr>
+    <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Web:</td>
+    <td ><a id="webentidad"></a></td> 
+  </tr>
+  <tr>
     <td style="margin-top:0; font-weight:bold; width:9%; vertical-align:text-top">Facebook:</td>
-    <td id="facebookentidad" ></td> 
+    <td  ><a id="facebookentidad"></a></td> 
   </tr>
 </table>
-    <center><a data-role="button" style="width:30%" onClick="compartir()">Compartir</a></center>
+<br>
+    <center><a data-role="button" data-icon="action" style="width:30%; font-size:12px" onClick="compartir()">Compartir</a></center>
     
     </div><!--fin contacto-->
     
@@ -799,12 +816,12 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
 	
 	 <div data-role="content" id="firma">
 	   <p>
-           Por favor presione <strong>Aceptar</strong> su quiere confimar su asistencia:
+           Por favor presione <strong>Aceptar</strong> si quiere confimar su asistencia:
             <br>
             <br>
             <strong>Titulo: </strong><span id="titulofirma" ></span>
 	   		<br>
-            <strong>Nº de registro: </strong><span id="registrofirma" ></span>
+            <span id="registrofirma" hidden="true"></span>
             <br>
             <span id="codigofirma" hidden="true"></span>
 	   </p>
@@ -884,7 +901,7 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     		<h2 style="color:#A7A7A7">Flickr</h2>
     		<p style="color:#A7A7A7">https://www.flickr.com/photos/yosoytaco/collections</p></a>
     	</li>
-		<li><a style="background-color:#ffffff" onClick="window.open('RUTA COMPARTIR','_system');">
+		<li><a style="background-color:#ffffff" onClick="window.open('whatsapp://send?text=Descarga la app de ICI TACO para ANDROID en https://play.google.com/store/apps/details?id=com.creatactil.icitaco para IOS en https://itunes.apple.com/us/app/ici-taco/id1087453225?mt=8', '_system');">
         	<img src="imagenes/compartir.jpg">
     		<h2 style="color:#A7A7A7">Compartir app</h2>
     		<p style="color:#A7A7A7"></p></a>

@@ -69,7 +69,7 @@ function listaEventos(date) {
                     '<br>'+
 						
 					'<center>'+
-								'<a style="width:50%;" class="confirmar" data-role="button" data-icon="check" onClick="confirmar(\''+item.id+'\' )">'+item.firma+'</a>'+
+								'<a style="width:50%; font-size: 11px" class="confirmar" data-role="button" data-icon="check" onClick="confirmar(\''+item.id+'\' )">'+item.firma+'</a>'+
 								'</center>'+
                                   '</div>' +
 								  

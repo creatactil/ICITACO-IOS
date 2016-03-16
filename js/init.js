@@ -20,7 +20,8 @@ function init(){
             true);
 		
 		}else{
-	inicio();
+			inicio();
+			setTimeout('comprobarid()',8000);
 		}
 		
 		

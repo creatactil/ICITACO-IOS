@@ -70,7 +70,7 @@ function listaentidad(clave, columna){
 			$('#listaentidad').append(			
 			
 			'<li class="ui-first-child">'+
-			'<a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r" onclick="mapa(\''+item.geometria+'\',\''+item.Nombre+'\',\''+item.Barrio+'\',\''+item.Municipio+'\',\''+item.Direccion+'\',\''+item.Facebook+'\',\''+item.CP+'\' )" >'+
+			'<a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r" onclick="mapa(\''+item.geometria+'\',\''+item.Nombre+'\',\''+item.Barrio+'\',\''+item.Municipio+'\',\''+item.Direccion+'\',\''+item.Facebook+'\',\''+item.CP+'\',\''+item.movil+'\',\''+item.telefono+'\',\''+item.web+'\' )" >'+
 			'<h4>'+item.Nombre+'</h4>'+
 			'</a>'+
 			'</li>'

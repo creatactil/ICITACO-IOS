@@ -1,5 +1,5 @@
 
-function mapa(geometria, nombre, barrio, municipio, direccion, facebook, CP) {
+function mapa(geometria, nombre, barrio, municipio, direccion, facebook, CP, movil, telefono, web) {
   
   $('#map').empty();
   
@@ -10,7 +10,15 @@ function mapa(geometria, nombre, barrio, municipio, direccion, facebook, CP) {
   $("#municipioentidad").text(municipio);
   $("#direccionentidad").text(direccion);
   $("#CPentidad").text(CP);
+   $("#movilentidad").text(movil);
+  $("#movilentidad").attr('href', "tel:"+movil);
+  $("#telefonoentidad").text(telefono);
+  $("#telefonoentidad").attr('href', "tel:"+telefono);
+  $("#webentidad").text(web);
+  $("#webentidad").attr('href', web);
   $("#facebookentidad").text(facebook);
+  
+  $("#facebookentidad").attr('href', facebook);
   
   
   //alert(nombre);

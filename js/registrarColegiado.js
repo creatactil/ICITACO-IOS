@@ -9,8 +9,8 @@ function registrarColegiado() {
 				var xdireccion = $("#direccion").val();
 				var xmunicipio = $("#municipio").val();
 				var xcodpostal = $("#codpostal").val();
-				var xsexo = $("#sexo").val();
-				var xedad = $("#edad").val();
+				var xsexo = "";
+				var xedad = "";
 				var xcorreo = $("#correo").val();
 				var xpass = $("#pass").val();
 				
@@ -39,7 +39,7 @@ function registrarColegiado() {
 		$("#movil").focus();
 		return false;
 		
-		}else if(xnmovil ==  ""){
+		}else if(xmovil ==  ""){
 		alert("Escriba su telefono móvil ");
 		$("#movil").focus();
 		return false;
@@ -59,7 +59,7 @@ function registrarColegiado() {
 		$("#municipio").focus();
 		return false;
 		
-		}else if(xsexo ==  ""){
+		/*}else if(xsexo ==  ""){
 		alert("Elija su sexo ");
 		$("#sexo").focus();
 		return false;
@@ -67,7 +67,7 @@ function registrarColegiado() {
 		}else if(xedad ==  ""){
 		alert("Elija su rango de edad ");
 		$("#edad").focus();
-		return false;
+		return false;*/
 			
 		
 		}else if(xcorreo == ""){
