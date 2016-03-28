@@ -30,9 +30,9 @@ function listaEventos(date) {
 			
 			var verde = "#000000";
 				
+			var tema = "#000000";
 			
-				var tema = "#000000";
-				
+			
 									
 			$('#listadeeventos').append(			
 			
@@ -52,7 +52,7 @@ function listaEventos(date) {
 					'<div style="height:20px; visibility:hidden"> </div>'+
 					'<div data-role="header" data-theme="b" >' + 
 					'<a href="#page9" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="a" class="ui-link ui-btn-left ui-btn ui-btn-a ui-icon-carat-l ui-btn-icon-notext ui-shadow ui-corner-all" role="button"><span class="ui-btn-inner ui-corner-bottom ui-controlgroup-last" aria-hidden="true"><span class="ui-btn-text">Atrás</span><span class="ui-icon ui-icon-back ui-icon-shadow"></span></span></a>'+
-					'<h1 style="font-size:13px; margin:0 10%">' + item.titulo + '</h1>' +
+					'<h1 style="font-size:14px; margin:0 10%">' + item.titulo + '</h1>' +
 					
 					'</div>' +
 					'<div data-role="content" id="contenido" >' +
@@ -69,25 +69,27 @@ function listaEventos(date) {
                     '<br>'+
 						
 					'<center>'+
-								'<a style="width:50%; font-size: 11px" class="confirmar" data-role="button" data-icon="check" onClick="confirmar(\''+item.id+'\' )">'+item.firma+'</a>'+
-								'</center>'+
-                                  '</div>' +
+					'<a  style="color:#006837; font-size: 13px" onClick="confirmar(\''+item.id+'\' )">'+item.firma+'</a>'+
+					'</center>'+
+                      '</div>' +
 								  
                                 '</p>' +
 							  	
 		
 	
 								'</div>';
-	   
-			
+								
+				
+	  						
 			$('body').append(content).trigger('refresh');
 			$(index).page();
 			
-			
+						
 		});
 		
 		}
-		
+				
+				
 			$("#carga23").hide(); 
 		}
 		
