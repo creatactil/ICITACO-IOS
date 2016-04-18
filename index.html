@@ -908,7 +908,12 @@ La finalidad de la cesión es actualizar la base de datos. Se podrán ejercitar 
     		<h2 style="color:#A7A7A7">Flickr</h2>
     		<p style="color:#A7A7A7">https://www.flickr.com/photos/yosoytaco/collections</p></a>
     	</li>
-		<li><a style="background-color:#ffffff" onClick="window.open('whatsapp://send?text=Descarga la app de ICI TACO para ANDROID en https://play.google.com/store/apps/details?id=com.creatactil.icitaco para IOS en https://itunes.apple.com/us/app/ici-taco/id1087453225?mt=8', '_blank');">
+		<li><a style="background-color:#ffffff" onclick="window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">
+        
+        
+        
+        
+        <!--<a style="background-color:#ffffff" onClick="window.open('whatsapp://send?text=Descarga la app de ICI TACO para ANDROID en https://play.google.com/store/apps/details?id=com.creatactil.icitaco para IOS en https://itunes.apple.com/us/app/ici-taco/id1087453225?mt=8', '_blank');">-->
         	<img src="imagenes/compartir.jpg">
     		<h2 style="color:#A7A7A7">Compartir app</h2>
     		<p style="color:#A7A7A7"></p></a>
