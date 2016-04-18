@@ -70,7 +70,7 @@
 		<gap:plugin name="org.apache.cordova.splashscreen" />
 		<gap:plugin name="org.apache.cordova.vibration" />
 		<plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
-		<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+		<gap:plugin name="cordova-plugin-x-socialsharing" />
    
 		<feature name="http://api.phonegap.com/1.0/file"/>
 		<feature name="http://api.phonegap.com/1.0/media"/>
