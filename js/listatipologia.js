@@ -4,7 +4,7 @@ function listatipologia() {
 	$('#listatipologia').empty();	
 
 		$.ajax({
-					url: 'http://icitacoapp.creatactil.com/php/listatipologia.php',
+					url: 'http://icitacoapp.creatactil.com/php/listatipologia2.php',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback',
 					timeout: 5000,

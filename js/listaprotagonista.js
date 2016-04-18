@@ -4,7 +4,7 @@ function listaprotagonista() {
 	$('#listaprotagonista').empty();	
 
 		$.ajax({
-					url: 'http://icitacoapp.creatactil.com/php/listaprotagonista.php',
+					url: 'http://icitacoapp.creatactil.com/php/listaprotagonista2.php',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback',
 					timeout: 5000,

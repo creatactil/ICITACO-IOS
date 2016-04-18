@@ -10,8 +10,9 @@ function compartir(){
 	var tel = $("#telefonoentidad").text();
 	var web = $("#webentidad").text();
 	var fac = $("#facebookentidad").text();
+	var cor = $("#correoentidad").text()
 	
-	var texto = "whatsapp://send?text="+"Nombre: "+nom +" Dirección: "+dir +" C. Postal: "+cp +" Barrio: "+bar + " Municpio: "+mun + " Móvil: "+mov + " Teléfono: "+tel +" Web: "+web +" Facebook: "+fac;
+	var texto = "whatsapp://send?text="+"Nombre: "+nom +" Dirección: "+dir +" C. Postal: "+cp +" Barrio: "+bar + " Municpio: "+mun + " Móvil: "+mov + " Teléfono: "+tel +" Web: "+web +" Facebook: "+fac +" Correo: "+cor;
 	
 	
 	//alert(texto)

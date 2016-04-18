@@ -4,7 +4,7 @@ function listasujeto() {
 	$('#listasujeto').empty();	
 
 		$.ajax({
-					url: 'http://icitacoapp.creatactil.com/php/listasujeto.php',
+					url: 'http://icitacoapp.creatactil.com/php/listasujeto2.php',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback',
 					timeout: 5000,

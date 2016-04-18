@@ -4,7 +4,7 @@ function listamunicipios() {
 	$('#listamunicipios').empty();	
 
 		$.ajax({
-					url: 'http://icitacoapp.creatactil.com/php/listamunicipios.php',
+					url: 'http://icitacoapp.creatactil.com/php/listamunicipios2.php',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback',
 					timeout: 5000,

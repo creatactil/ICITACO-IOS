@@ -16,7 +16,7 @@ function mapatodo() {
 		
 		
 		$.ajax({
-					url: 'http://icitacoapp.creatactil.com/php/mapatodos.php',
+					url: 'http://icitacoapp.creatactil.com/php/mapatodos2.php',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback',
 					timeout: 5000,
@@ -25,11 +25,11 @@ function mapatodo() {
 	   	 
 		      $.each(data, function(index, item) {
 			
-			var geometria = item.geometria;    
+			//var geometria = item.geometria;    
 			var nombre = item.Nombre;
 			
-			var lng = parseFloat(geometria.substring(6, 27));
-  			var lat = parseFloat(geometria.substring(27, 48));
+			var lng = parseFloat(item.x);
+  			var lat = parseFloat(item.y);
 						
 			//alert(lat);
   			//alert(lng);

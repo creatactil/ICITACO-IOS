@@ -4,7 +4,7 @@ function listabarrios() {
 	$('#listabarrios').empty();	
 
 		$.ajax({
-					url: 'http://icitacoapp.creatactil.com/php/listabarrios.php',
+					url: 'http://icitacoapp.creatactil.com/php/listabarrios2.php',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback',
 					timeout: 5000,
@@ -56,7 +56,7 @@ function listaentidad(clave, columna){
         true);
 		
 			$.ajax({
-					url: 'http://icitacoapp.creatactil.com/php/listaentidad.php',
+					url: 'http://icitacoapp.creatactil.com/php/listaentidad2.php',
 					dataType: 'jsonp',
 					jsonp: 'jsoncallback',
 					timeout: 5000,
@@ -65,12 +65,12 @@ function listaentidad(clave, columna){
 	   	 
 		      $.each(data, function(index, item) {
 			
-			     //alert(item.Nombre);
+			    
 			
 			$('#listaentidad').append(			
 			
 			'<li class="ui-first-child">'+
-			'<a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r" onclick="mapa(\''+item.geometria+'\',\''+item.Nombre+'\',\''+item.Barrio+'\',\''+item.Municipio+'\',\''+item.Direccion+'\',\''+item.Facebook+'\',\''+item.CP+'\',\''+item.movil+'\',\''+item.telefono+'\',\''+item.web+'\' )" >'+
+			'<a href="#mapa" class="ui-btn ui-btn-icon-right ui-icon-carat-r" onclick="mapa(\''+item.id+'\' )" >'+
 			'<h4>'+item.Nombre+'</h4>'+
 			'</a>'+
 			'</li>'
