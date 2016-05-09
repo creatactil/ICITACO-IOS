@@ -17,9 +17,13 @@
  };
  $.datepicker.setDefaults($.datepicker.regional['es']);
 
-var events = [];
+//var events = [];
 
         function listafechas() {
+			
+			var events = [];
+			
+			$( "#micalendario" ).datepicker("destroy");
 			
 			$('#listadeeventos').empty();
 			$.mobile.changePage("#page9", {transition: "pop"},
