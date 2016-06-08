@@ -67,6 +67,7 @@ var app = {
 	   document.getElementById('regId').value = result;
 	   	var uuid = device.uuid;
 		localStorage.uuid = uuid;
+		localStorage.regid = result;
 	   
 	   //alert(result);
     },
@@ -90,6 +91,7 @@ var app = {
 					var uuid = device.uuid;
 		
 					localStorage.uuid = uuid;
+					localStorage.regid = e.regid;
 					//alert (uuid);
 					globo();
 					console.log(uuid);
