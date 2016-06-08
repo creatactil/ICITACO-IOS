@@ -15,7 +15,7 @@ function registrarColegiado() {
 				var xpass = $("#pass").val();
 				
 									
-				var xregid = localStorage.regid;
+				var xregid = $("#regId").val();
 				var xuuid = localStorage.uuid;
 				
 				var xnmovil = xmovil.substring(0, 1);	

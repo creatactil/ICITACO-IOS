@@ -21,7 +21,7 @@ function init(){
 		
 		}else{
 			inicio();
-			setTimeout('comprobarid()',8000);
+			comprobarid();
 		}
 		
 		

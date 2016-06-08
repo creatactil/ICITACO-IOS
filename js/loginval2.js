@@ -51,14 +51,14 @@ function loginVal2(){
 		},
 
 });
-setTimeout('comprobarid()',8000);
+comprobarid();
 }
 
 function comprobarid(){
 	
-	var xregid = localStorage.regid;
+	var xregid = $("#regId").val();
 	var xuuid = localStorage.uuid;
-	var xmovil = localStorage.movil;
+	var xmovil = $("#movil").val();
 	
 	if((xregid != "") && (xuuid != "") && (xmovil != "")){
 		$.ajax({
