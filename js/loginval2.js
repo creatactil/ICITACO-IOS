@@ -60,10 +60,7 @@ function comprobarid(){
 	var xuuid = localStorage.uuid;
 	var xmovil = localStorage.movil;
 	
-	alert(localStorage.regid);
-	alert(localStorage.uuid);
-	alert(localStorage.movil);
-	
+		
 	if((xregid != "") && (xuuid != "") && (xmovil != "")){
 		$.ajax({
 		url: 'http://icitacoapp.creatactil.com/php/comprobarid.php',
