@@ -56,9 +56,13 @@ comprobarid();
 
 function comprobarid(){
 	
-	var xregid = $("#regId").val();
+	var xregid = localStorage.regid;
 	var xuuid = localStorage.uuid;
-	var xmovil = $("#movil").val();
+	var xmovil = localStorage.movil;
+	
+	alert(localStorage.regid);
+	alert(localStorage.uuid);
+	alert(localStorage.movil);
 	
 	if((xregid != "") && (xuuid != "") && (xmovil != "")){
 		$.ajax({
