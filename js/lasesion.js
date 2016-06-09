@@ -41,7 +41,6 @@ if ((typeof xmovil == 'undefined') || (xmovil == "")){
 		listatipologia();
 		listaprotagonista();
 		listasujeto();
-		//listatodos();
 		mapatodo();
 		}
 		
