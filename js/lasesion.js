@@ -13,7 +13,7 @@ if ((typeof xmovil == 'undefined') || (xmovil == "")){
 		
 	}else{
 		crearLista();
-		comprobarid();
+		
 		}
 		
 }
