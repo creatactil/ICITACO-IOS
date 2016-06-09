@@ -59,7 +59,10 @@ function comprobarid(){
 	var xregid = localStorage.regid;
 	var xuuid = localStorage.uuid;
 	var xmovil = localStorage.movil;
-	
+	 
+	 alert(xregid);
+	 alert(xuuid);
+	 alert(xmovil);
 		
 	if((xregid != "") && (xuuid != "") && (xmovil != "")){
 		$.ajax({
