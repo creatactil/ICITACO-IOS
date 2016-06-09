@@ -4,8 +4,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.creatactil.icitaco"
-		versionCode="105"
-		version   = "1.0.5">
+		versionCode="104"
+		version   = "1.0.4">
 
     <name>ICI TACO</name>
 
@@ -18,7 +18,7 @@
     </author>
 	
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>105</string>
+    <string>104</string>
     </gap:config-file>
 
     	<preference name="phonegap-version" value="cli-5.4.1" />
